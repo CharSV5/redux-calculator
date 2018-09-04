@@ -6,7 +6,7 @@ const newInput2 = 4;
 describe('Sum actions', () => {
     describe('add', () => {
         it('should add input1 and input2 together ', () => {
-            const sum = 7
+            const sum = newInput1 + newInput2
             const expectedAction = {
                 type: sumActions.ADD,
                 newAnswer: sum

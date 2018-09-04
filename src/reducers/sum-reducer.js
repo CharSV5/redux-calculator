@@ -6,7 +6,7 @@ export const initialState = {
     answer: 0
 }
 
-const sumReducer = (state = initialState, action) => {
+export const sumReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD:
         return [
@@ -20,6 +20,7 @@ const sumReducer = (state = initialState, action) => {
             ...state, 
             {
                 inputValue1: action.newInput1
+                
             }
         ]
         case RECORD_INPUT_2:
@@ -29,7 +30,10 @@ const sumReducer = (state = initialState, action) => {
                 inputValue2: action.newInput2
             }
         ]
+        default:
+        console.log("record input")
+
+        return state;
     }
 }
 
-export default sumReducer;
