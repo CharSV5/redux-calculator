@@ -8,30 +8,49 @@ import { bindActionCreators } from 'redux';
 class ButtonsContainer extends Component {
     constructor(props) {
         super(props);
-    
+
         this.handleClick = this.handleClick.bind(this);
-        console.log(JSON.stringify(this.props))
+        this.handleMaths = this.handleMaths.bind(this);
+        console.log('start', this.props.inputValue1)
     }
 
     handleClick(num) {
-        console.log("handleClick", this.props)
-       this.props.onRecordInput1(num) 
+      if (this.props.inputValue1 === '') {
+        this.props.onRecordInput1(num)
+      } else {
+        this.props.onRecordInput2(num)
+      }
+
+    }
+
+    
+
+    handleMaths(maths) {
+      console.log(maths)
+      return currentmaths = maths
+    }
+
+    equals() {
+      inputValue1 + currentmaths + inputValue2
     }
 
     render() {
         // console.log("EEEEEEEEEE", this.props)
         return(
-            <Buttons handleClick={this.handleClick} inputValue1={this.props.inputValue1}/>
+            <Buttons
+              handleClick={this.handleClick}
+              inputValue1={this.props.inputValue1}
+              handleMaths={this.handleMaths}/>
      )
     }
-}    
+}
 
     const mapStateToProps = (state) => {
         // console.log("kkkkkkkkk", state)
         return {
             inputValue1: state.sumReducer.inputValue1,
-            inputValue2: state.inputValue2,
-            answer: state.answer
+            inputValue2: state.sumReducer.inputValue2,
+            answer: state.sumReducer.answer
         }
     }
 
