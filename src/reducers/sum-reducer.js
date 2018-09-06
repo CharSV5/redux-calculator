@@ -1,13 +1,13 @@
-import { RECORD_INPUT_1, RECORD_INPUT_2, MATHS_IS_PLUS, CALCULATE_ANSWER } from '../actions/sum-action'
+import { RECORD_INPUT_1, RECORD_INPUT_2 } from '../actions/sum-action';
+import { CALCULATE_ANSWER } from '../actions/answer-action';
 
-export const initialState = {
+export const initialSumState = {
     inputValue1: '',
-    inputValue2: '',
-    answer: 0,
-    currentMaths: ''
+    inputValue2: ''
+   
 }
 
-export const sumReducer = (state = initialState, action) => {
+export const sumReducer = (state = initialSumState, action) => {
     switch (action.type) {
         case RECORD_INPUT_1: {
         return Object.assign({}, state, {
@@ -21,17 +21,6 @@ export const sumReducer = (state = initialState, action) => {
         });
         }
 
-        case MATHS_IS_PLUS: {
-        return Object.assign({}, state, {
-            currentMaths: action.plus
-        })
-        }
-
-        case CALCULATE_ANSWER: {
-        return Object.assign({}, state, {
-            answer: action.newAnswer
-        })
-        }
         default:
         return state;
     }

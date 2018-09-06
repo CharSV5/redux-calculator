@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Buttons from '../components/Buttons';
-import { Record_Input_1, Record_Input_2,  Calculate_Answer } from '../actions/sum-action';
-import { Maths_Is_Plus } from '../actions/maths-actions';
+import { Record_Input_1, Record_Input_2 } from '../actions/sum-action';
+import { Maths_Is_Plus } from '../actions/maths-action';
 import { Calculate_Answer } from '../actions/answer-action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -61,7 +61,7 @@ class ButtonsContainer extends Component {
         return {
             inputValue1: state.sumReducer.inputValue1,
             inputValue2: state.sumReducer.inputValue2,
-            currentMaths: state.sumReducer.currentMaths,
+            currentMaths: state.mathsReducer.currentMaths,
             answer: state.sumReducer.answer
         }
     }
