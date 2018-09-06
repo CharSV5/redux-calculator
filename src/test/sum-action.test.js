@@ -4,16 +4,6 @@ const newInput1 = 3;
 const newInput2 = 4;
 
 describe('Sum actions', () => {
-    describe('Calculate_Answer', () => {
-        it('should add input1 and input2 together ', () => {
-            const sum = newInput1 + newInput2
-            const expectedAction = {
-                type: sumActions.CALCULATE_ANSWER,
-                newAnswer: sum
-            }
-            expect(sumActions.Calculate_Answer(newInput1, newInput2)).toEqual(expectedAction)
-        })
-    })
     describe('record_Input_1', ()=> {
         it('should record the first input', () => {
             const expectedAction = {

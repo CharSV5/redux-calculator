@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Buttons from '../components/Buttons'
-import { Record_Input_1, Record_Input_2, Maths_Is_Plus, Calculate_Answer } from '../actions/sum-action';
+import Buttons from '../components/Buttons';
+import { Record_Input_1, Record_Input_2,  Calculate_Answer } from '../actions/sum-action';
+import { Maths_Is_Plus } from '../actions/maths-actions';
+import { Calculate_Answer } from '../actions/answer-action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
