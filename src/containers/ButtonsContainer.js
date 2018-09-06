@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
-class ButtonsContainer extends Component {
+export class ButtonsContainer extends Component {
     constructor(props) {
         super(props);
 

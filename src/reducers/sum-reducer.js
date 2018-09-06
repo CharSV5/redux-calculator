@@ -1,5 +1,5 @@
 import { RECORD_INPUT_1, RECORD_INPUT_2 } from '../actions/sum-action';
-import { CALCULATE_ANSWER } from '../actions/answer-action';
+
 
 export const initialSumState = {
     inputValue1: '',
