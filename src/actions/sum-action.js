@@ -1,15 +1,9 @@
-export const ADD = 'ADD';
+
 export const RECORD_INPUT_1 = 'RECORD_INPUT_1';
 export const RECORD_INPUT_2 = 'RECORD_INPUT_2';
 export const MATHS_IS_PLUS = 'MATHS_IS_PLUS';
 export const CALCULATE_ANSWER = 'CALCULATE_ANSWER';
 
-export const add = (newInput1, newInput2) => {
-    return {
-        type: ADD,
-        newAnswer: newInput1 + newInput2
-    }
-}
 
 export const Record_Input_1 = (newInput1) => {
     return {
@@ -32,9 +26,9 @@ export const Maths_Is_Plus = (plus) => {
     }
 }
 
-export const Calculate_Answer = (answer) => {
+export const Calculate_Answer = (newInput1, newInput2) => {
     return {
         type: CALCULATE_ANSWER,
-        answer
+        newAnswer: newInput1 + newInput2
     }
 }

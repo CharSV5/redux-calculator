@@ -38,7 +38,7 @@ class ButtonsContainer extends Component {
     equals() {
         console.log('in equals', this.props)
         // if (this.props.currentMaths === '+') {
-            return this.props.onCalculateAnswer
+            return this.props.onCalculateAnswer(this.props.inputValue1, this.props.inputValue2)
         // }
     }
 
@@ -57,10 +57,10 @@ class ButtonsContainer extends Component {
     const mapStateToProps = (state) => {
         console.log("state", state)
         return {
-            inputValue1: state.sumReducer[0],
+            inputValue1: state.sumReducer.inputValue1,
             inputValue2: state.sumReducer.inputValue2,
-            answer: state.sumReducer.answer,
-            currentMaths: state.sumReducer.currentMaths
+            currentMaths: state.sumReducer.currentMaths,
+            answer: state.sumReducer.answer
         }
     }
 
