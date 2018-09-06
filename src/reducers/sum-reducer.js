@@ -1,9 +1,10 @@
-import { ADD, RECORD_INPUT_1, RECORD_INPUT_2 } from '../actions/sum-action'
+import { ADD, RECORD_INPUT_1, RECORD_INPUT_2, MATHS_IS_PLUS, CALCULATE_ANSWER } from '../actions/sum-action'
 
 export const initialState = {
     inputValue1: '',
     inputValue2: '',
-    answer: 0
+    answer: 0,
+    currentMaths: ''
 }
 
 export const sumReducer = (state = initialState, action) => {
@@ -30,8 +31,24 @@ export const sumReducer = (state = initialState, action) => {
                 inputValue2: action.newInput2
             }
         ]
+        case MATHS_IS_PLUS:
+        return [
+            ...state,
+            {
+                currentMaths: action.plus
+            }
+        ]
+        case CALCULATE_ANSWER:
+        
+        return [
+            ...state,
+           
+            {
+                answer: action.newInput1 + action.newInput2
+            }
+        ]
         default:
-        console.log("record input")
+      
 
         return state;
     }
