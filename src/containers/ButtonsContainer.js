@@ -13,7 +13,7 @@ export class ButtonsContainer extends Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.handleMaths = this.handleMaths.bind(this);
-        this.equals = this.equals.bind(this);
+        this.isEquals = this.isEquals.bind(this);
         console.log('start', this.props)
     }
 
@@ -37,7 +37,7 @@ export class ButtonsContainer extends Component {
       
     }
 
-    equals() {
+    isEquals() {
         console.log('in equals', this.props)
         // if (this.props.currentMaths === '+') {
             return this.props.onCalculateAnswer(this.props.inputValue1, this.props.inputValue2)
@@ -51,7 +51,7 @@ export class ButtonsContainer extends Component {
               inputValue1={this.props.inputValue1}
               inputValue2={this.props.inputValue2}
               handleMaths={this.handleMaths}
-              equals={this.equals}/>
+              isEquals={this.isEquals}/>
      )
     }
 }

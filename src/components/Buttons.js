@@ -34,19 +34,19 @@ class Buttons extends Component {
 
         return (
             <div>
-               <div className="numbers">
-                <div>{row1}</div>
-                <br />
-                <div>{row2}</div>
-                <br />
-                <div>{row3}</div>
-              </div>  
+                <div className="numbers">
+                    <div>{row1}</div>
+                    <br />
+                    <div>{row2}</div>
+                    <br />
+                    <div>{row3}</div>
+                </div>
                 <button onClick={() => this.props.handleMaths('+')} className={"handleMathsPlus"}>
                     +
-          </button>
-                <button onClick={() => this.props.equals()}>
+                 </button>
+                <button onClick={() => this.props.isEquals()} className={"isEquals"}>
                     =
-          </button>
+                </button>
             </div>
         )
     }

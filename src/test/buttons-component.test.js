@@ -28,5 +28,9 @@ describe('<Buttons />', () => {
     it('renders a plus button', () => {
         expect(wrapper.find('.handleMathsPlus')).toHaveLength(1)
     })
+
+    it('renders an equals button', () => {
+        expect(wrapper.find('.isEquals')).toHaveLength(1)
+    })
 });
 
