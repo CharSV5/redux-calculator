@@ -44,6 +44,9 @@ class Buttons extends Component {
                 <button onClick={() => this.props.handleMaths('+')} className={"handleMathsPlus"}>
                     +
                  </button>
+                 <button onClick={() => this.props.handleMaths('-')} className={"handleMathsMinus"}>
+                    -
+                 </button>
                 <button onClick={() => this.props.isEquals()} className={"isEquals"}>
                     =
                 </button>

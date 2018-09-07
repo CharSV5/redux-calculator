@@ -12,15 +12,7 @@ describe('<Buttons />', () => {
     it('renders one Buttons component', () => {
         expect(wrapper).toHaveLength(1);
     })
-    // it('has numbered buttons', () => {
-    //     expect(wrapper.matchesElement(<div className="numbers">
-    //         <div>{row1}</div>
-    //         <br />
-    //         <div>{row2}</div>
-    //         <br />
-    //         <div>{row3}</div>
-    //     </div>)).toEqual(true)
-    // })
+  
     it('renders a number 1 button', () => {
         expect(wrapper.find('.button-1')).toHaveLength(1);
     })

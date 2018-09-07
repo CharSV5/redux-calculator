@@ -1,4 +1,4 @@
-import { MATHS_IS_PLUS } from '../actions/maths-action';
+import { MATHS_IS_PLUS, MATHS_IS_MINUS } from '../actions/maths-action';
 
 export const initialMathsState = {
     currentMaths: ''
@@ -12,6 +12,13 @@ export const mathsReducer = (state = initialMathsState, action) => {
                 })
         
         } 
+
+        case MATHS_IS_MINUS: {
+            return Object.assign({}, state, {
+                currentMaths: action.minus
+                })
+        
+        }
         default:
         return state;  
     }
