@@ -24,4 +24,14 @@ describe('Answer actions', () => {
             expect(answerActions.Calculate_Minus(newInput1, newInput2)).toEqual(expectedAction)
         })
     })
+    describe('Calculate_Divide', () => {
+        it('should divide input1 by input2', () => {
+            const total = newInput1 / newInput2
+            const expectedAction = {
+                type: answerActions.CALCULATE_DIVIDE,
+                newAnswer: total
+            }
+            expect(answerActions.Calculate_Divide(newInput1, newInput2)).toEqual(expectedAction)
+        })
+    })
 })
